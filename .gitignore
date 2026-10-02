@@ -1,3 +1,10 @@
 .venv
-temp_mcap
-conversion_progress.json
+__pycache__
+
+#Robot data
+robot_data_converter/temp_mcap
+robot_data_converter/conversion_progress.json
+
+#Simulation data
+sim_converter/temp_mcap_sim
+sim_converter/sim_conversion_progress.json
