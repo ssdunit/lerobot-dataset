@@ -31,8 +31,8 @@ def get_frame_count(local_file, topic="/top-left-camera"):
     return 0
 
 HF_USERNAME = "ssdunit"
-TASK_NAME = "dress_the_teddy_bear"
-NEW_DATASET_ID = f"{HF_USERNAME}/abc_dress_the_teddy_bear"
+TASK_NAME = "" #TODO: Add the task name from XDOF/ABC-130k 
+NEW_DATASET_ID = f"{HF_USERNAME}/abc_{TASK_NAME}"
 SOURCE_REPO = "XDOF/ABC-130k"
 TEMP_DIR = "./temp_mcap"
 PROGRESS_FILE = "./conversion_progress.json"

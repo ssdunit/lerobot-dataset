@@ -86,7 +86,7 @@ def detect_camera_resolutions(local_file, camera_topics):
 def main():
 
     HF_USERNAME = "ssdunit"
-    TASK_NAME = "set_up_chess_pieces_on_the_board"
+    TASK_NAME = "" #TODO: Add the exact task name from XDOF/ABC-130k
     NEW_DATASET_ID = f"{HF_USERNAME}/abc_sim_{TASK_NAME}"
     SOURCE_REPO = "XDOF/ABC-130k"
     TEMP_DIR = "./temp_mcap_sim"
@@ -170,7 +170,7 @@ def main():
         }
         for topic, feature_name in CAMERA_TOPICS.items():
             h, w = resolutions_by_topic[topic]
-            features[feature_name] = {"dtype": "video", "shape": (3, h, w)}
+            features[feature_name] = {"dtype": "video", "shape": (3, h, w),"names": ["channels", "height", "width"]}
 
         print(f"Initializing empty LeRobot dataset: {NEW_DATASET_ID}")
         dataset = LeRobotDataset.create(
